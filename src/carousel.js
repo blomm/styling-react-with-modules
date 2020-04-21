@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import styleable from 'react-styleable'
+
+import css from './carousel.module.css'
 
 function renderSlides(props) {
   return React.Children.map(props.children, (slide, i) => {
@@ -7,15 +10,15 @@ function renderSlides(props) {
       style: {
         ...slide.props.style,
         width: props.width,
-        left: props.width * (i - props.showIndex)
-      }
+        left: props.width * (i - props.showIndex),
+      },
     })
   })
 }
 
 function Carousel(props) {
   return (
-    <div>
+    <div className={props.css.root}>
       {renderSlides(props)}
       {props.nav}
     </div>
@@ -25,7 +28,7 @@ function Carousel(props) {
 Carousel.propTypes = {
   nav: PropTypes.node.isRequired,
   showIndex: PropTypes.number,
-  width: PropTypes.number
+  width: PropTypes.number,
 }
 
-export default Carousel
+export default styleable(css)(Carousel)

@@ -1,0 +1,11 @@
+* {
+  /* The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  /* While em is relative to the font-size of its direct or nearest parent, rem is only relative to the html (root) font-size */
+  line-height: 1.4em;
+  background-color: #1d272f;
+}

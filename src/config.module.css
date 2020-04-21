@@ -1,0 +1,6 @@
+:root {
+  /* Property names that are prefixed with -- represent custom properties that
+  contain a value that can be used in other declarations using the var() function */
+  --imageWidth: 640px;
+  --imageHeight: 420px;
+}

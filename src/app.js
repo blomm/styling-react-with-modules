@@ -5,6 +5,8 @@ import Frame from './frame.js'
 import Nav from './nav.js'
 import Slide from './slide.js'
 
+import './app.module.css'
+
 export default class DriftApp extends React.Component {
   constructor(props) {
     super(props)
@@ -12,17 +14,17 @@ export default class DriftApp extends React.Component {
     this.handleClickNext = this.handleClickNext.bind(this)
     this.state = {
       showIndex: 0,
-      numSlides: 5
+      numSlides: 5,
     }
   }
   handleClickPrevious() {
     this.setState({
-      showIndex: Math.max(this.state.showIndex - 1, 0)
+      showIndex: Math.max(this.state.showIndex - 1, 0),
     })
   }
   handleClickNext() {
     this.setState({
-      showIndex: Math.min(this.state.showIndex + 1, this.state.numSlides - 1)
+      showIndex: Math.min(this.state.showIndex + 1, this.state.numSlides - 1),
     })
   }
   renderNav() {
